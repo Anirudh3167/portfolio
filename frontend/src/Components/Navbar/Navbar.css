@@ -1,0 +1,110 @@
+.NavWrapper {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+                                                /* Static NavBar */
+.NavFixedContainer {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+    width: 100vw;
+    height: 60px;
+
+    background-color: transparent;
+    color: var(--fg-clr);
+    padding: 10px;
+    font-size: 18px;
+    z-index: 1;
+}
+
+.NavFixedMenuBtn {
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    height: 40px;
+
+    padding: 0 10px;   
+}
+
+.NavFixedMenuContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+
+    width: 100%;
+    max-width: 500px;
+    min-width: 300px;
+    height: 40px;
+}
+
+                                                    /* Side navBar */
+.NavSideBarHamburger {
+    position: fixed;
+    top: 50px;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+    padding: 10px;
+    background-color: #222;
+    z-index: 5;
+}
+
+.activeSideBar {
+    background-color: purple;
+}
+
+.NavSideBarLine {
+    display: flex;
+
+    width: 30px;
+    height: 2px;
+
+    margin: 4px;
+    background-color: silver;
+    transition: 1s;
+}
+
+.activeSideBar > .TopLine {transform: translateY(5px) rotateZ(45deg);}
+.activeSideBar > .BottomLine {transform: translateY(-5px) rotateZ(-45deg);}
+
+.NavSideBarContainer {
+    position: absolute;
+    top: 20px;
+    right: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 100%;
+    max-width: 500px;
+    min-width: 300px;
+    height: calc(100vh - 20px);
+
+    overflow: scroll;
+    background-color: #222;
+    color: var(--fg-clr);
+    font-size: 20px;
+    font-weight: 500;
+    z-index: 4;
+}
+
+@media only screen and (max-width:600px) {
+    .NavFixedMenuBtn {display: flex;}
+    .NavFixedMenuContainer {display: none;}
+    .NavSideBarContainer {top: 0; height: 100vh;}
+}
