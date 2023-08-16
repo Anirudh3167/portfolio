@@ -13,7 +13,7 @@
     flex-direction: column;
 
     width: 100vw;
-    min-height: 100vh;
+    min-height: 110vh;
 
     background-color: var(--bg-clr);
     color: var(--fg-clr);
