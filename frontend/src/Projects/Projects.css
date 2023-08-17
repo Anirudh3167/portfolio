@@ -1,0 +1,19 @@
+.ProjectsMainWrapper {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.ProjectsMainContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 100vw;
+    min-height: 110vh;
+
+    overflow: scroll;
+    background-color: var(--bg-clr);
+    color: var(--fg-clr);
+}
