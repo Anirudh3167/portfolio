@@ -22,12 +22,12 @@ function Navbar() {
       window.removeEventListener('scroll', onscroll);
     };
   }, []);
-  
+
   return (
     <div className='NavWrapper'>
         {/* Fixed NavBar on Top of the page */}
         <div className="NavFixedContainer">
-          <div className="NavFixedLogoSpace"> ANIRUDH </div>
+          <Link to="/" className="NavFixedLogoSpace"> ANIRUDH </Link>
           <div className="NavFixedMenuBtn" onClick={() => {setMenuClicked(true)}}> Menu </div>
           <div className="NavFixedMenuContainer">
             <Link to="/" className={`NavFixedMenuItem ${location.pathname === "/" ? "activeLink" : ""}`}> Home </Link>
@@ -46,10 +46,13 @@ function Navbar() {
           </div>
           : ""
         }
-        <div className="NavSideBarContainer" style={menuClicked ? {transform:"translateX(0%)"} : {transform:"translateX(100%)"}}>
+        {menuClicked ? <div className="NavBackOevrlay"></div> : ""}
+        <div className="NavSideBarContainer" 
+        style={menuClicked ? {transform:"translateX(0%)"} : {transform:"translateX(100%)"}}>
             <div className="NavSideBarHead"> NAVIGATION </div>
             <div className="NavSideBarItemsContainer">
-              <Link to="/" className='NavSideItemContainer'> 
+              <Link to="/" className='NavSideItemContainer'
+              onMouseOver={(e) => {}}> 
                 <div className="NavSideBarCircle" style={location.pathname === "/" ? {backgroundColor:"var(--fg-clr)"} : {backgroundColor:"transparent"}}></div> 
                 <div className="NavSideBarItem"> Home </div></Link>
               <Link to="/projects" className='NavSideItemContainer'> 

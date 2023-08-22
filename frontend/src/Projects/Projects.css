@@ -7,13 +7,98 @@
 .ProjectsMainContainer {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
 
     width: 100vw;
     min-height: 110vh;
 
     overflow: scroll;
+    padding-top: 60px;
     background-color: var(--bg-clr);
     color: var(--fg-clr);
+}
+
+.ProjectsTopNavbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+
+    width: 100%;
+    min-height: 60px;
+
+    border-bottom: 2px solid rgb(40,40,40);
+}
+
+.ProjectsTagsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    width: fit-content;
+    min-width: 300px;
+}
+
+.ProjectsTagItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: fit-content;
+    min-width: 60px;
+    height: 40px;
+
+    padding: 10px 20px;
+    font-size: 18px;
+    color: black;
+    background-color: white;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+.ActiveProjectTag {
+    color: white;
+    background-color: #222;
+}
+
+.ProjectsSearchContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    max-width: 800px;
+    min-width: 300px;
+
+    padding: 0 5px;
+}
+
+.InputBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 40px;
+
+    padding: 5px;
+    padding-left: 15px;
+    font-size: 18px;
+    color: white;
+    background-color: transparent;
+    border: 1px solid rgb(140,140,140);
+    border-radius: 5px;
+}
+
+.ProjectsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    width: 100%;
+    min-height: calc(100vh - 100px);
 }

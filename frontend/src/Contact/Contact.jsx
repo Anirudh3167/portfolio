@@ -6,6 +6,10 @@ import './Contact.css'
 function Contact() {
   return (
     <div className='ContactmainWrapper'>
+      <div className="LoadingContainer">
+        <div className="LoadingContainerDot"></div>
+        Contact
+      </div>
         <Navbar />
         <div className="ContactMainContainer">
             This is Contact Page

@@ -4,6 +4,30 @@
     box-sizing: border-box;
 }
 
+.HomeLoadingContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    font-size: 30px;
+    font-weight: 600;
+    z-index: 20;
+    color: white;
+    background-color: black;
+    transition: 1s;
+}
+
+@keyframes HomeloadingAnimation {
+    0% {top: 0;}
+    100% {top: -100%;}
+}
+
 .HomeMainContainer {
     position: absolute;
     top: 0;
@@ -21,3 +45,24 @@
     font-weight: 700;
     z-index: 0;
 }
+
+.HomeCircleBar {
+    position: absolute;
+    top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 0;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    background-color: white;
+    animation: dragup 1s ease-out linear infinite;
+}
+
+@keyframes dragup {
+    0% { height: 300px;}
+    100% { height: 0px;}
+}
+
