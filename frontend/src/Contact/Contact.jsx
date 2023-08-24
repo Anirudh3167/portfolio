@@ -12,7 +12,8 @@ function Contact() {
       </div>
         <Navbar />
         <div className="ContactMainContainer">
-            This is Contact Page
+            <div className="ContactLeftContainer"> Input boxes here for mailer </div>
+            <div className="ContactRightContainer"> Presonal Details here </div>
         </div>
     </div>
   )

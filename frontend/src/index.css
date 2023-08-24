@@ -30,7 +30,7 @@ a:hover {
 .activeLink:hover {border-bottom: 2px solid blue;}
 
 .LoadingContainer {
-  position: absolute;
+  position: fixed;
   top: -100vh;
   left: 0;
 
@@ -48,14 +48,14 @@ a:hover {
   font-size: 30px;
   font-weight: 600;
   z-index: 10;
-  animation: loadingAnimation 1.5s ease-in-out;
+  animation: loadingAnimation 0.7s ease-in-out;
 }
 
 @keyframes loadingAnimation {
   0% {top: 0;}
-  40% {top: 0;}
   100% {top: -100vh;}
 }
+
 .LoadingContainerDot {
   display: flex;
   align-items: center;

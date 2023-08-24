@@ -39,7 +39,7 @@
     width: 100vw;
     min-height: 110vh;
 
-    background-color: var(--bg-clr);
+    background-color: grey;
     color: var(--fg-clr);
     font-size: 30px;
     font-weight: 700;

@@ -10,10 +10,33 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    flex-wrap: wrap-reverse;
+    flex-direction: row;
 
     width: 100vw;
     height: 110vh;
 
     overflow: scroll;
+}
+
+.ContactLeftContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 70%;
+    min-width: 300px;
+    max-width: 1000px;
+}
+
+.ContactRightContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 30%;
+    min-width: 300px;
+    max-width: 500px;
 }
