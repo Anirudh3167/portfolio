@@ -44,6 +44,21 @@
     font-size: 30px;
     font-weight: 700;
     z-index: 0;
+    transition: 1.5s;
+}
+
+.HomeMainSlide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 100vw;
+    min-height: 100vh;
+
+    font-size: 30px;
+    font-weight: 700;
+    z-index: 0;
 }
 
 .HomeCircleBar {

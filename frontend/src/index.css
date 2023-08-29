@@ -52,7 +52,7 @@ a:hover {
 }
 
 @keyframes loadingAnimation {
-  0% {top: 0;}
+  0% {top: 0vh;}
   100% {top: -100vh;}
 }
 
@@ -67,4 +67,28 @@ a:hover {
   margin: 0 20px;
   background-color: white;
   border-radius: 50%;
+}
+
+.LoadingContainerCurve {
+  position: absolute;
+  bottom: 0px;
+  display: flex;
+
+  width: 100%;
+  height: 10px;
+
+  border-radius: 50%;
+  background-color: black;
+  animation: loadingCurve 0.7s ease-in;
+}
+
+@keyframes loadingCurve {
+  0% {
+    bottom: -150px;
+    height: 150px;
+  }
+  100% {
+    bottom: -10px;
+    height: 10px;
+  }
 }

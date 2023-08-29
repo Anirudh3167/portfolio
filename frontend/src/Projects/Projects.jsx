@@ -11,6 +11,7 @@ function Projects() {
       <div className="LoadingContainer">
         <div className="LoadingContainerDot"></div>
         Projects
+        <div className="LoadingContainerCurve"></div>
       </div>
         <Navbar />
         <div className="ProjectsMainContainer">

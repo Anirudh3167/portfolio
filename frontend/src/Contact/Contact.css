@@ -122,6 +122,20 @@
     height: 200px;
 }
 
+.ContactMailerTextAreaBox::-webkit-scrollbar {
+    width: 10px; 
+    height: 100%; 
+    background-color: rgba(200,200,200,0.2);
+    z-index: 1; 
+    cursor: pointer;
+    border-radius: 10px;
+}
+.ContactMailerTextAreaBox::-webkit-scrollbar-thumb {
+    background-color: grey;
+    z-index: 1;
+    border-radius: 10px;
+}
+
 .ContactMailerSend {
     display: flex;
     align-items: center;
