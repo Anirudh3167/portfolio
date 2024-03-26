@@ -75,10 +75,10 @@ function Navbar() {
     event.preventDefault();
     // Setting the boundaries.
     let target = event.target;
-    setX1(target.offsetLeft);
-    setX2(target.offsetLeft + target.offsetWidth);
-    setY1(target.offsetTop);
-    setY2(target.offsetTop + target.offsetHeight);
+    setX1(target.offsetLeft + target.offsetWidth/4);
+    setX2(target.offsetLeft + target.offsetWidth*5/4);
+    setY1(target.offsetTop + target.offsetHeight/4);
+    setY2(target.offsetTop + target.offsetHeight*3/4);
   }
 
   // Attach the scroll event listener when the component mounts

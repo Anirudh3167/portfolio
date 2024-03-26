@@ -94,10 +94,10 @@ function Home() {
         <Navbar />
         <div className="HomeMainContainer" ref={HomeStyle}>
           <div className="HomeMainSlide">
-            Comming soon
+            <h1>Hi there, I am Anirudh 🖐</h1> <br /><br /><br /> Scroll down to know more about me.
           </div>
           <div className="HomeMainSlide">
-            Skills will be displayed here.
+            <h1>Skills:</h1> <br /> 1. Web Dev 80% <br /> 2. Ai 40% <br /> 3. DSA 60%
           </div>
           <div className="HomeMainSlide">
             Best three projects will be displayed here.
