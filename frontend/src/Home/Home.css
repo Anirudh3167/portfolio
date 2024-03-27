@@ -49,16 +49,60 @@
 
 .HomeMainSlide {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     flex-direction: column;
 
     width: 100vw;
     min-height: 100vh;
 
-    font-size: 30px;
-    font-weight: 700;
     z-index: 0;
+    backdrop-filter: blur(30px);
+    color: white;
+}
+
+.HomeSectionLeft {
+    display: flex;
+    align-items: flex-start;    justify-content: center;    flex-direction: column;
+
+    width: auto;    height: auto;   gap: 20px;  padding: 30px;
+}
+
+.HomeSectionHead {
+    display: flex;
+    align-items: center;    justify-content: center;
+    text-align: left;
+
+    width: auto;    height: auto;
+
+    font-size: 60px;    font-weight: 700;
+    gap: 1rem;
+}
+
+.HomeSectionName {
+    background: linear-gradient(90deg, rgba(200,50,50,0.9),rgba(250,0,0,0.9));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.HomeSectionRole {
+    display: flex;
+    align-items: center;    justify-content: center;
+    text-align: left;
+
+    width: auto;    height: auto;
+
+    font-size: 60px;    font-weight: 700;
+    background:linear-gradient(90deg, rgba(150,20,20,0.6) , rgba(20,20,20,0.8));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.HomeSectionBackground {
+    position: fixed;
+    width: 500px;   height: 350px;  border-radius: 50%;
+
+    background: radial-gradient(rgba(20,20,250,0.5) 0%, rgba(20,20,200,0.3) 40%, rgba(20,20,150,0.1) 100%);
 }
 
 .HomeCircleBar {
@@ -76,6 +120,38 @@
     animation: dragup 1s ease-out linear infinite;
 }
 
+.HomeProjectsSliderWrapper {
+    display: flex;
+    align-items: flex-start;    justify-content: flex-start;    flex-direction: column;
+
+    width: calc(100% - 20px);   height: fit-content;
+
+    margin: 10px;   padding: 10px;  gap: 10px;  border-radius: 10px;
+    background: rgba(20,20,20,0.8);
+}
+
+.HomeProjectsSlider {
+    display: flex;
+    align-items: flex-start;    justify-content: flex-start;    flex-direction: row;
+
+    width: 100%;    height: fit-content;
+
+    padding: 10px;  gap: 10px;
+    overflow-x: auto;
+}
+
+.HomeProjectsSliderItem {
+    display: flex;
+    align-items: center;    justify-content: center;
+
+    min-width: 300px;   height: 200px;
+
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid white;
+    color: white;   background-color: black;
+    font-size: 20px;
+}
 @keyframes dragup {
     0% { height: 300px;}
     100% { height: 0px;}
