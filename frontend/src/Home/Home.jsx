@@ -11,30 +11,30 @@ import Navbar from '../Components/Navbar/Navbar'
 function Home() {
   const [loading,setLoading] = useState(true);
   const [loadingText,setLoadingText] = useState("Hello");
-  const Texts = [
-    "Hello",            // English
-    "Bonjour",          // French
-    "नमस्ते",             // Hindi
-    "வணக்கம்",         // Tamil (Vanakkam)
-    "Hola",             // Spanish
-    "Hallo",            // German
-    "你好",               // Chinese (Mandarin) (Nǐ hǎo)
-    "مرحباً",            // Arabic (Marhaba)
-    "Привет",           // Russian (Privet)
-    "Ciao",             // Italian
-    "こんにちは",           // Japanese (Konnichiwa)
-    "안녕하세요",          // Korean (Annyeonghaseyo)
-    "Olá",              // Portuguese
-    "Hallo",            // Dutch
-    "Merhaba",          // Turkish
-    "Γειά σας",          // Greek (Yia sas)
-    "Hej",              // Swedish, Danish
-    "Cześć",            // Polish
-    "Hei",              // Norwegian, Finnish
-  ];
   
 
   useEffect(() => {
+    const Texts = [
+      "Hello",            // English
+      "Bonjour",          // French
+      "नमस्ते",             // Hindi
+      "வணக்கம்",         // Tamil (Vanakkam)
+      "Hola",             // Spanish
+      "Hallo",            // German
+      "你好",               // Chinese (Mandarin) (Nǐ hǎo)
+      "مرحباً",            // Arabic (Marhaba)
+      "Привет",           // Russian (Privet)
+      "Ciao",             // Italian
+      "こんにちは",           // Japanese (Konnichiwa)
+      "안녕하세요",          // Korean (Annyeonghaseyo)
+      "Olá",              // Portuguese
+      "Hallo",            // Dutch
+      "Merhaba",          // Turkish
+      "Γειά σας",          // Greek (Yia sas)
+      "Hej",              // Swedish, Danish
+      "Cześć",            // Polish
+      "Hei",              // Norwegian, Finnish
+    ];
     let index = 0;
   
     const animationTimeout = setTimeout(() => {
@@ -104,10 +104,28 @@ function Home() {
             </div>
           </div>
           <div className="HomeMainSlide">
-            <h1>Skills:</h1> <br /> 1. Web Dev 80% <br /> 2. Ai 40% <br /> 3. DSA 60%
+            <div className="HomeProjectsSliderWrapper" style={{backgroundColor:'rgba(10,10,10,0.9)'}}>
+              <div className="HomeSectionHead" style={{fontSize:'40px', paddingLeft:'10px'}}> Skills : </div>
+              <div className="HomeProjectsSlider">
+                <div className="HomeProjectsSliderItem"> Web Dev </div>
+                <div className="HomeProjectsSliderItem"> AI </div>
+                <div className="HomeProjectsSliderItem"> DSA </div>
+              </div>
+            </div>
+            <div className="HomeProjectsSliderWrapper" style={{backgroundColor:'rgba(10,10,10,0.9)'}}>
+              <div className="HomeSectionHead" style={{fontSize:'40px', paddingLeft:'10px'}}> Frameworks : </div>
+              <div className="HomeProjectsSlider">
+                <div className="HomeProjectsSliderItem"> React </div>
+                <div className="HomeProjectsSliderItem"> PyTorch </div>
+                <div className="HomeProjectsSliderItem"> Spyder </div>
+                <div className="HomeProjectsSliderItem"> NextJs </div>
+                <div className="HomeProjectsSliderItem"> Django </div>
+                <div className="HomeProjectsSliderItem"> FastAPI </div>
+              </div>
+            </div>
           </div>
           <div className="HomeMainSlide">
-            <div className="HomeProjectsSliderWrapper">
+            <div className="HomeProjectsSliderWrapper" style={{backgroundColor:'rgb(40 38 38 / 80%)'}}>
               <div className="HomeSectionHead" style={{fontSize:'40px', paddingLeft:'10px'}}> Projects </div>
               <div className="HomeProjectsSlider">
                 <div className="HomeProjectsSliderItem"> Threads Clone </div>
