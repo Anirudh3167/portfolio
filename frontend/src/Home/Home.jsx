@@ -7,6 +7,9 @@ import './Home.css'
 
 // Component Imports
 import Navbar from '../Components/Navbar/Navbar'
+import { FaReact } from 'react-icons/fa'
+import { SiPytorch, SiSpyderide, SiDjango, SiFastapi } from 'react-icons/si'
+import { RiNextjsLine } from 'react-icons/ri'
 
 function Home() {
   const [loading,setLoading] = useState(true);
@@ -104,7 +107,7 @@ function Home() {
             </div>
           </div>
           <div className="HomeMainSlide">
-            <div className="HomeProjectsSliderWrapper" style={{backgroundColor:'rgba(10,10,10,0.9)'}}>
+            <div className="HomeProjectsSliderWrapper">
               <div className="HomeSectionHead" style={{fontSize:'40px', paddingLeft:'10px'}}> Skills : </div>
               <div className="HomeProjectsSlider">
                 <div className="HomeProjectsSliderItem"> Web Dev </div>
@@ -112,20 +115,29 @@ function Home() {
                 <div className="HomeProjectsSliderItem"> DSA </div>
               </div>
             </div>
-            <div className="HomeProjectsSliderWrapper" style={{backgroundColor:'rgba(10,10,10,0.9)'}}>
+            <div className="HomeProjectsSliderWrapper">
               <div className="HomeSectionHead" style={{fontSize:'40px', paddingLeft:'10px'}}> Frameworks : </div>
               <div className="HomeProjectsSlider">
-                <div className="HomeProjectsSliderItem"> React </div>
-                <div className="HomeProjectsSliderItem"> PyTorch </div>
-                <div className="HomeProjectsSliderItem"> Spyder </div>
-                <div className="HomeProjectsSliderItem"> NextJs </div>
-                <div className="HomeProjectsSliderItem"> Django </div>
-                <div className="HomeProjectsSliderItem"> FastAPI </div>
+                <div className="HomeProjectsSliderItem"> 
+                    <FaReact size={64} />
+                    React 
+                </div>
+                <div className="HomeProjectsSliderItem"> 
+                  <SiPytorch size={64} /> PyTorch 
+                </div>
+                <div className="HomeProjectsSliderItem">
+                  <SiSpyderide size={64} /> Spyder </div>
+                <div className="HomeProjectsSliderItem">
+                  <RiNextjsLine size={64} />  NextJs </div>
+                <div className="HomeProjectsSliderItem">
+                  <SiDjango size={64} /> Django </div>
+                <div className="HomeProjectsSliderItem">
+                  <SiFastapi size={64} /> FastAPI </div>
               </div>
             </div>
           </div>
           <div className="HomeMainSlide">
-            <div className="HomeProjectsSliderWrapper" style={{backgroundColor:'rgb(40 38 38 / 80%)'}}>
+            <div className="HomeProjectsSliderWrapper">
               <div className="HomeSectionHead" style={{fontSize:'40px', paddingLeft:'10px'}}> Projects </div>
               <div className="HomeProjectsSlider">
                 <div className="HomeProjectsSliderItem"> Threads Clone </div>
