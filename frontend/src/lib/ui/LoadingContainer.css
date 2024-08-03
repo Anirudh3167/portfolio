@@ -1,0 +1,39 @@
+.LoadingContainer {
+    position: fixed;
+    top: -100vh;
+    left: 0;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  
+    width: 100vw;
+    height: 100vh;
+  
+    background-color: black;
+    color: white;
+  
+    font-size: 30px;
+    font-weight: 600;
+    z-index: 10;
+    animation: loadingAnimation 0.7s ease-in-out;
+  }
+  
+  @keyframes loadingAnimation {
+    0% {top: 0vh;}
+    100% {top: -100vh;}
+  }
+  
+  .LoadingContainerDot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    width: 10px;
+    height: 10px;
+  
+    margin: 0 20px;
+    background-color: white;
+    border-radius: 50%;
+  }

@@ -7,43 +7,20 @@ import './Home.css'
 
 // Component Imports
 import Navbar from '../Components/Navbar/Navbar'
-import { FaReact } from 'react-icons/fa'
-import { SiPytorch, SiSpyderide, SiDjango, SiFastapi } from 'react-icons/si'
-import { RiNextjsLine } from 'react-icons/ri'
+
+// Constants
+import { Texts, skills, projects, frameworks } from '../lib/constants';
 
 function Home() {
   const [loading,setLoading] = useState(true);
   const [loadingText,setLoadingText] = useState("Hello");
-  
 
   useEffect(() => {
-    const Texts = [
-      "Hello",            // English
-      "Bonjour",          // French
-      "नमस्ते",             // Hindi
-      "வணக்கம்",         // Tamil (Vanakkam)
-      "Hola",             // Spanish
-      "Hallo",            // German
-      "你好",               // Chinese (Mandarin) (Nǐ hǎo)
-      "مرحباً",            // Arabic (Marhaba)
-      "Привет",           // Russian (Privet)
-      "Ciao",             // Italian
-      "こんにちは",           // Japanese (Konnichiwa)
-      "안녕하세요",          // Korean (Annyeonghaseyo)
-      "Olá",              // Portuguese
-      "Hallo",            // Dutch
-      "Merhaba",          // Turkish
-      "Γειά σας",          // Greek (Yia sas)
-      "Hej",              // Swedish, Danish
-      "Cześć",            // Polish
-      "Hei",              // Norwegian, Finnish
-    ];
     let index = 0;
   
     const animationTimeout = setTimeout(() => {
       const changeLoadingText = setInterval(() => {
-        setLoadingText(Texts[index % Texts.length]);
-        index++;
+        setLoadingText(Texts[index++ % Texts.length]);
       }, 100);
   
       setTimeout(() => {
@@ -60,26 +37,19 @@ function Home() {
   
   const [slideActive,setSlideActive] = useState("slide1");
   const HomeStyle = useRef();
+  
   const handleScrollSlide = () => {
     if (window.scrollY > window.innerHeight*(160/100)) {setSlideActive("slide3")} 
     else if (window.scrollY > window.innerHeight*(60/100)) {setSlideActive("slide2")}
     else if (window.scrollY > 0) {setSlideActive("slide1")}
   }
+
   useEffect(()=>{
-    if (slideActive === "slide1") {
-      HomeStyle.current.style.backgroundColor = "grey"
-      // HomeStyle.current.style.color = "white"
-    } else if (slideActive === "slide2") {
-      HomeStyle.current.style.backgroundColor = "#D32F2F"
-      // HomeStyle.current.style.color = "white"
-    } else if (slideActive === "slide3") {
-      HomeStyle.current.style.backgroundColor = "black"
-      // HomeStyle.current.style.color = "#D32F2F"
-    } else {
-      HomeStyle.current.style.backgroundColor = "black"
-      // HomeStyle.current.style.color = "white"
-    }
+    const ActiveSlideColor = {"slide1": "grey", "slide2": "#D32F2F", "slide3": "black"}
+    HomeStyle.current.style.backgroundColor =
+      (slideActive in ActiveSlideColor) ? ActiveSlideColor[slideActive] : "black";
   },[slideActive])
+
   // Attach the scroll event listener when the component mounts
   useEffect(() => {
     window.addEventListener('scroll', handleScrollSlide);
@@ -110,40 +80,28 @@ function Home() {
             <div className="HomeProjectsSliderWrapper">
               <div className="HomeSectionHead" style={{fontSize:'40px', paddingLeft:'10px'}}> Skills : </div>
               <div className="HomeProjectsSlider">
-                <div className="HomeProjectsSliderItem"> Web Dev </div>
-                <div className="HomeProjectsSliderItem"> AI </div>
-                <div className="HomeProjectsSliderItem"> DSA </div>
+                {skills.map((skill,idx) => 
+                    <div className="HomeProjectsSliderItem" key={idx}> {skill} </div>
+                )}
               </div>
             </div>
             <div className="HomeProjectsSliderWrapper">
               <div className="HomeSectionHead" style={{fontSize:'40px', paddingLeft:'10px'}}> Frameworks : </div>
               <div className="HomeProjectsSlider">
-                <div className="HomeProjectsSliderItem"> 
-                    <FaReact size={64} />
-                    React 
-                </div>
-                <div className="HomeProjectsSliderItem"> 
-                  <SiPytorch size={64} /> PyTorch 
-                </div>
-                <div className="HomeProjectsSliderItem">
-                  <SiSpyderide size={64} /> Spyder </div>
-                <div className="HomeProjectsSliderItem">
-                  <RiNextjsLine size={64} />  NextJs </div>
-                <div className="HomeProjectsSliderItem">
-                  <SiDjango size={64} /> Django </div>
-                <div className="HomeProjectsSliderItem">
-                  <SiFastapi size={64} /> FastAPI </div>
-              </div>
+                {frameworks.map((framework,idx) => 
+                    <div className="HomeProjectsSliderItem" key={idx}> {framework.icon} {framework.name} </div>
+                )}
             </div>
           </div>
           <div className="HomeMainSlide">
             <div className="HomeProjectsSliderWrapper">
               <div className="HomeSectionHead" style={{fontSize:'40px', paddingLeft:'10px'}}> Projects </div>
               <div className="HomeProjectsSlider">
-                <div className="HomeProjectsSliderItem"> Threads Clone </div>
-                <div className="HomeProjectsSliderItem"> Blog Site </div>
-                <div className="HomeProjectsSliderItem"> Eco In </div>
+                {projects.map((project,idx) => 
+                    <div className="HomeProjectsSliderItem" key={idx}> {project} </div>
+                )}
                 <div className="HomeProjectsSliderItem"> <Link to='./projects'> View More </Link> </div>
+              </div>
               </div>
             </div>
           </div>

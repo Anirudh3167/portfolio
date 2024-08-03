@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Navbar from '../Components/Navbar/Navbar'
 
 import './Contact.css'
+import LoadingContainer from '../lib/ui/LoadingContainer';
 
 function Contact() {
   const [name,setName] = useState("");
@@ -26,10 +27,7 @@ function Contact() {
   }
   return (
     <div className='ContactmainWrapper'>
-      <div className="LoadingContainer">
-        <div className="LoadingContainerDot"></div>
-        Contact
-      </div>
+        <LoadingContainer name="Contact" />
         <Navbar />
         
         <div className="ContactMainContainer">

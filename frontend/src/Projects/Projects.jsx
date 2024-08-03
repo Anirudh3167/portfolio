@@ -1,18 +1,16 @@
-import React, { useState } from 'react'
+// import React, { useState } from 'react'
 
 import './Projects.css'
 
 import Navbar from '../Components/Navbar/Navbar'
+import LoadingContainer from '../lib/ui/LoadingContainer';
 
 function Projects() {
-  const [projects,setProjects] = useState();
+  // const [projects,setProjects] = useState();
+  const projects = [];
   return (
     <div className='ProjectsMainWrapper'>
-      <div className="LoadingContainer">
-        <div className="LoadingContainerDot"></div>
-        Projects
-        <div className="LoadingContainerCurve"></div>
-      </div>
+        <LoadingContainer name="Projects" />
         <Navbar />
         <div className="ProjectsMainContainer">
             <div className="ProjectsTopNavbar">
@@ -27,7 +25,7 @@ function Projects() {
             </div>
             <div className="ProjectsContainer" style={projects ? {} : {justifyContent:"center",fontSize:"24px",fontWeight:"700"}}>
               {
-                projects ? "You have some projects here."
+                projects?.length > 0 ? "You have some projects here."
                 : "Projects are currently in building stage"
               }
             </div>
