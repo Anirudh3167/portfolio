@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import Navbar from '../Components/Navbar/Navbar'
+import Navbar from '../../Components/Navbar/Navbar'
 
 import './Contact.css'
-import LoadingContainer from '../lib/ui/LoadingContainer';
+import LoadingContainer from '../../lib/ui/LoadingContainer';
 
 function Contact() {
   const [name,setName] = useState("");

@@ -6,10 +6,10 @@ import { Link } from 'react-router-dom';
 import './Home.css'
 
 // Component Imports
-import Navbar from '../Components/Navbar/Navbar'
+import Navbar from '../../Components/Navbar/Navbar'
 
 // Constants
-import { Texts, skills, projects, frameworks } from '../lib/constants';
+import { Texts, skills, homePageProjects, frameworks } from '../../lib/constants';
 
 function Home() {
   const [loading,setLoading] = useState(true);
@@ -69,7 +69,7 @@ function Home() {
           {/* The two circles in display */}
           <div className="HomeSectionBackground" style={{top:'20%', right:'5%', height: '300px', width: '400px'}}></div>
           <div className="HomeSectionBackground" style={{top:'30%', right:'20%', height: '400px', width: '350px'}}></div>
-          <div className="HomeMainSlide">
+          <div className="HomeMainSlide" style={{background:'rgba(170,170,170,0.35)'}}>
             <div className="HomeSectionLeft">
               <div className="HomeSectionHead" style={{fontSize:'40px'}}> Hi there, </div>
               <div className="HomeSectionHead"> I am <div className='HomeSectionName'>Anirudh</div> </div>
@@ -97,7 +97,7 @@ function Home() {
             <div className="HomeProjectsSliderWrapper">
               <div className="HomeSectionHead" style={{fontSize:'40px', paddingLeft:'10px'}}> Projects </div>
               <div className="HomeProjectsSlider">
-                {projects.map((project,idx) => 
+                {homePageProjects.map((project,idx) => 
                     <div className="HomeProjectsSliderItem" key={idx}> {project} </div>
                 )}
                 <div className="HomeProjectsSliderItem"> <Link to='./projects'> View More </Link> </div>

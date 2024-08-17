@@ -33,6 +33,10 @@ export const Texts = [
     {name:"FastAPI",icon:<SiFastapi size={64} />},
     {name:"NextJS",icon:<RiNextjsLine size={64} />},
   ]
- export const projects = [
+ export const homePageProjects = [
     'Threads Clone', 'Blog Site', 'EcoIn',
+  ]
+
+  export const projects = [
+    'Threads Clone', 'Blog Site', 'EcoIn', 'Job Board', 'BERT', 'GPT', 'Stable Diffusion', 'Track Notes', 'ultimAs', 'NOVA',
   ]
