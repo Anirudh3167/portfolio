@@ -6,6 +6,7 @@ import './App.css';
 import Home from './Pages/Home/Home';
 import Contact from './Pages/Contact/Contact';
 import Projects from './Pages/Projects/Projects';
+import AboutMe from './Pages/About Me/AboutMe';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/projects' element={<Projects />} />
+          <Route path='/about' element={<AboutMe />} />
         </Routes>
       </BrowserRouter>
     </div>

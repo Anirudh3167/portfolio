@@ -33,10 +33,59 @@ export const Texts = [
     {name:"FastAPI",icon:<SiFastapi size={64} />},
     {name:"NextJS",icon:<RiNextjsLine size={64} />},
   ]
- export const homePageProjects = [
-    'Threads Clone', 'Blog Site', 'EcoIn',
-  ]
+ export const homePageProjects = [{
+  title: "Threads Clone",
+  image: "",
+  tags: ['MERN', 'ReactJS', 'MongoDB', 'ExpressJS', 'NodeJS', 'Socket io', 'Full stack', 'Web Development', 'javascript'],
+}, {
+  title: "Blog Site",
+  image: "",
+  tags: ['NextJS', 'Django', 'SQlite3', 'Full stack', 'Web Development', 'javascript', 'python'],
+}, {
+  title: "EcoIn",
+  image: "",
+  tags: ['Django', 'Jinja', 'SQlite3', 'Full stack', 'Web Development', 'python'],
+}]
 
-  export const projects = [
-    'Threads Clone', 'Blog Site', 'EcoIn', 'Job Board', 'BERT', 'GPT', 'Stable Diffusion', 'Track Notes', 'ultimAs', 'NOVA',
+  export const projects = [{
+    title: "Threads Clone",
+    image: "",
+    tags: ['MERN', 'ReactJS', 'MongoDB', 'ExpressJS', 'NodeJS', 'Socket io', 'Full stack', 'Web Development', 'javascript'],
+  }, {
+    title: "Blog Site",
+    image: "",
+    tags: ['NextJS', 'Django', 'SQlite3', 'Full stack', 'Web Development', 'javascript', 'python'],
+  }, {
+    title: "EcoIn",
+    image: "",
+    tags: ['Django', 'Jinja', 'SQlite3', 'Full stack', 'Web Development', 'python'],
+  }, {
+    title: "Job Board",
+    image: "",
+    tags: ['ReactJS', 'Frontend', 'Web Development', 'javascript'],
+  }, {
+    title: "BERT",
+    image: "",
+    tags: ['Python', 'NLP', 'Machine Learning', 'LLM', 'AI', 'Deep Learning'],
+  }, {
+    title: "GPT",
+    image: "",
+    tags: ['Python', 'NLP', 'Machine Learning', 'LLM', 'AI', 'Deep Learning'],
+  }, {
+    title: "Stable Diffusion",
+    image: "",
+    tags: ['Python', 'CV', 'Machine Learning', 'AI', 'Deep Learning'],
+  }, {
+    title: "Track Notes",
+    image: "",
+    tags: ['NextJs', 'MongoDB', 'NextUI', 'Tailwind', 'ShadCN', 'Full stack', 'Web Development', 'javascript'],
+  }, {
+    title: "ultimAs",
+    image: "",
+    tags: ['Python', 'NLP', 'Machine Learning', 'LLM', 'AI', 'Deep Learning', 'Desktop'],
+  }, {
+    title: "NOVA",
+    image: "",
+    tags: ['Python', 'NLP', 'Machine Learning', 'LLM', 'AI', 'Deep Learning', 'Mobile'],
+  }
   ]

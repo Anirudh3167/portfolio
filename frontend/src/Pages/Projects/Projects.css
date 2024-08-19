@@ -100,7 +100,7 @@
 .ProjectsContainer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 15px;
+    gap: 15px;
 
     width: 100%;
     min-height: calc(100vh - 100px);

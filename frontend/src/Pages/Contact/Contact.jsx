@@ -90,7 +90,6 @@ function Contact() {
                 <div className="ContactMailerSend"
                 onClick={(e) => {handleSend(e)}}> Send </div>
             </div>
-            <div className="ContactRightContainer"> Presonal Details here </div>
         </div>
     </div>
   )

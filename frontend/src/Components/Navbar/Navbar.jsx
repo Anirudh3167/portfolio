@@ -17,6 +17,9 @@ function Navbar() {
   const router = useNavigate();
   const [loadingScreen,setLoadingScreen] = useState(false);
   const [path,setPath] = useState("dummy");
+  const links = {
+    "Home" : "/", "Projects" : "/projects", "About Me" : "/about", "Contact Me" : "/contact"
+  };
   
   const onscroll = () => {
     setDisplayHamburger(window.scrollY > 50);
@@ -103,24 +106,14 @@ function Navbar() {
           <div className="NavFixedMenuBtn" onClick={() => {setMenuClicked(true)}}> Menu </div>
 
           <div className="NavFixedMenuContainer">
-            <Link to="/" onClick={(e) => {handleLink(e,"");}}
-            onMouseMove={(e) => {handleMouseMove(e)}}
+          {Object.entries(links).map(([key,value]) => <Link to={value} 
+            onClick={(e) => {handleLink(e,value.slice(1))}}
             onMouseLeave={(e) => {handleMouseLeave(e)}}
-            onMouseEnter={(e) => {handleMouseEnter(e)}}
-            className={`NavFixedMenuItem ${location.pathname === "/" ? "activeLink" : ""}`}
-            > Home </Link>
-            <Link to="/projects" onClick={(e) => {handleLink(e,"projects");}}
             onMouseMove={(e) => {handleMouseMove(e)}}
-            onMouseLeave={(e) => {handleMouseLeave(e)}}
-            onMouseEnter={(e) => {handleMouseEnter(e)}}
-            className={`NavFixedMenuItem ${location.pathname === "/projects" ? "activeLink" : ""}`}
-            > Projects </Link>
-            <Link to="/contact" onClick={(e) => {handleLink(e,"contact");}}
-            onMouseMove={(e) => {handleMouseMove(e)}}
-            onMouseLeave={(e) => {handleMouseLeave(e)}}
-            onMouseEnter={(e) => {handleMouseEnter(e)}}
-            className={`NavFixedMenuItem ${location.pathname === "/contact" ? "activeLink" : ""}`}
-            > Contact </Link>
+            onMouseEnter={(e) => {handleMouseEnter(e)}} 
+            key={key} className={`NavFixedMenuItem ${location.pathname === value ? "activeLink" : ""}`}
+            > {key} </Link>
+          )}
           </div>
 
         </div>
@@ -140,29 +133,16 @@ function Navbar() {
         style={menuClicked ? {transform:"translateX(0%)"} : {transform:"translateX(100%)"}}>
             <div className="NavSideBarHead"> NAVIGATION </div>
             <div className="NavSideBarItemsContainer">
-              <Link to="/" onClick={(e) => {handleLink(e,"");}}
-              onMouseMove={(e) => {handleMouseMove(e)}}
-              onMouseLeave={(e) => {handleMouseLeave(e)}}
-              onMouseEnter={(e) => {handleMouseEnter(e)}}
-              className='NavSideItemContainer'> 
-                <div className="NavSideBarCircle" style={location.pathname === "/" ? {backgroundColor:"var(--fg-clr)"} : {backgroundColor:"transparent"}}></div> 
-                <div className="NavSideBarItem"> Home </div></Link>
-              <Link to="/projects" onClick={(e) => {handleLink(e,"projects");}}
-              onMouseMove={(e) => {handleMouseMove(e)}}
-              onMouseLeave={(e) => {handleMouseLeave(e)}}
-              onMouseEnter={(e) => {handleMouseEnter(e)}}
-              className='NavSideItemContainer'> 
-              <div className="NavSideBarCircle" style={location.pathname === "/projects" ? {backgroundColor:"var(--fg-clr)"} : {backgroundColor:"transparent"}}></div> 
-                <div className="NavSideBarItem"> Projects </div>
-              </Link>
-              <Link to="/contact" onClick={(e) => {handleLink(e,"contact");}}
-              onMouseMove={(e) => {handleMouseMove(e)}}
-              onMouseLeave={(e) => {handleMouseLeave(e)}}
-              onMouseEnter={(e) => {handleMouseEnter(e)}}
-              className='NavSideItemContainer'> 
-              <div className="NavSideBarCircle" style={location.pathname === "/contact" ? {backgroundColor:"var(--fg-clr)"} : {backgroundColor:"transparent"}}></div> 
-                <div className="NavSideBarItem"> Contact </div>
-              </Link>
+              {Object.entries(links).map(([key,value]) => {
+                return <Link to={value} onClick={(e) => {handleLink(e,value.slice(1))}}
+                onMouseMove={(e) => {handleMouseMove(e)}}
+                onMouseLeave={(e) => {handleMouseLeave(e)}}
+                onMouseEnter={(e) => {handleMouseEnter(e)}}
+                key={key} className='NavSideItemContainer'> 
+                  <div className="NavSideBarCircle" style={location.pathname === value ? {backgroundColor:"var(--fg-clr)"} : {backgroundColor:"transparent"}}></div> 
+                  <div className="NavSideBarItem"> {key} </div>
+                </Link>
+              })}
             </div>
             <div className="NavSideBarHead"> SOCIAL LINKS </div>
             <div className="NavSideBarSocial">

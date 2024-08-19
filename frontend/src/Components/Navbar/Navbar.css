@@ -62,7 +62,7 @@
     align-items: center;
     justify-content: center;
 
-    width: 50px;
+    width: 100px;
     height: 40px;
 
     padding: 2px;
@@ -195,7 +195,7 @@
     flex-direction: row;
     flex-wrap: nowrap;
 
-    width: 200px;
+    width: fit-content;
     height: 60px;
     
     margin: 5px 0;

@@ -10,6 +10,7 @@ import Navbar from '../../Components/Navbar/Navbar'
 
 // Constants
 import { Texts, skills, homePageProjects, frameworks } from '../../lib/constants';
+import ProjectCard from '../../Components/ProjectCard/ProjectCard';
 
 function Home() {
   const [loading,setLoading] = useState(true);
@@ -45,7 +46,7 @@ function Home() {
   }
 
   useEffect(()=>{
-    const ActiveSlideColor = {"slide1": "grey", "slide2": "#D32F2F", "slide3": "black"}
+    const ActiveSlideColor = {"slide1": "rgb(170, 170, 170)", "slide2": "#D32F2F", "slide3": "black"}
     HomeStyle.current.style.backgroundColor =
       (slideActive in ActiveSlideColor) ? ActiveSlideColor[slideActive] : "black";
   },[slideActive])
@@ -67,9 +68,9 @@ function Home() {
         <Navbar />
         <div className="HomeMainContainer" ref={HomeStyle}>
           {/* The two circles in display */}
-          <div className="HomeSectionBackground" style={{top:'20%', right:'5%', height: '300px', width: '400px'}}></div>
-          <div className="HomeSectionBackground" style={{top:'30%', right:'20%', height: '400px', width: '350px'}}></div>
-          <div className="HomeMainSlide" style={{background:'rgba(170,170,170,0.35)'}}>
+          <div className="HomeSectionBackground" style={{top:'20%', right:'10%', height: '300px', width: '400px'}}></div>
+          <div className="HomeSectionBackground" style={{top:'30%', right:'25%', height: '400px', width: '350px'}}></div>
+          <div className="HomeMainSlide">
             <div className="HomeSectionLeft">
               <div className="HomeSectionHead" style={{fontSize:'40px'}}> Hi there, </div>
               <div className="HomeSectionHead"> I am <div className='HomeSectionName'>Anirudh</div> </div>
@@ -97,10 +98,10 @@ function Home() {
             <div className="HomeProjectsSliderWrapper">
               <div className="HomeSectionHead" style={{fontSize:'40px', paddingLeft:'10px'}}> Projects </div>
               <div className="HomeProjectsSlider">
-                {homePageProjects.map((project,idx) => 
-                    <div className="HomeProjectsSliderItem" key={idx}> {project} </div>
+                {homePageProjects.map((project) => 
+                    <ProjectCard projectDetails={project} />
                 )}
-                <div className="HomeProjectsSliderItem"> <Link to='./projects'> View More </Link> </div>
+                <div className="HomeProjectsSliderItem" style={{height:'300px',width:'260px'}}> <Link to='./projects'> View More </Link> </div>
               </div>
               </div>
             </div>
